@@ -637,7 +637,7 @@ public class Lab4P2_CesarBrito {
                                 }
                             } else if (empleados.get(i) instanceof Directores) {
                                 int f = 1;
-                                while (f != 9) {
+                                while (f != 10) {
                                     System.out.print("1. Crear Desarrollador\n"
                                             + "2. Crear Consultor\n"
                                             + "3. Modificar Desarrolador\n"
@@ -894,6 +894,44 @@ public class Lab4P2_CesarBrito {
         }
     }
 }
+/*
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 
 // porfavor ten piedad :v
