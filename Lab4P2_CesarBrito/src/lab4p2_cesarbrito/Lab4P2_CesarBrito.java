@@ -294,7 +294,251 @@ public class Lab4P2_CesarBrito {
                         System.out.print("Ingrese la posicion del empleado que desea modificar: ");
                         int po = sc.nextInt();
                         if (po < empleados.size()) {
-
+                            if (empleados.get(po) instanceof Desarrolladores) {
+                                System.out.print("1. Cambiar username\n"
+                                        + "2. Cambiar contraseña}n"
+                                        + "3. Cambiar nombre\n"
+                                        + "4. Cambiar apellido\n"
+                                        + "5. Cambiar id\n"
+                                        + "6. Cambiar nacionalidad\n"
+                                        + "7. Cambiar proyectos realizados\n"
+                                        + "8. Cambiar años del contrato\n"
+                                        + "9. Cambiar años de experiencia\n"
+                                        + "10. Cambiar horas de trabajo\n"
+                                        + "11. Cambiar proyectos asignados\n"
+                                        + "12. Cambiar lenguaje preferido\n"
+                                        + "Ingrese su opcion: ");
+                                int option = sc.nextInt();
+                                if (option == 1) {
+                                    System.out.print("Ingrese su usuario: ");
+                                    String username = sc.next();
+                                    empleados.get(po).setUsername(username);
+                                } else if (option == 2) {
+                                    System.out.print("Ingrese su contraseña: ");
+                                    String password = sc.next();
+                                    empleados.get(po).setPassword(password);
+                                } else if (option == 3) {
+                                    System.out.print("Ingrese su nombre: ");
+                                    String nombre = sc.next();
+                                    empleados.get(po).setNombre(nombre);
+                                } else if (option == 4) {
+                                    System.out.print("Ingrese su apellido: ");
+                                    String apellido = sc.next();
+                                    empleados.get(po).setApellido(apellido);
+                                } else if (option == 5) {
+                                    System.out.print("Ingrese su ID: ");
+                                    String id = sc.next();
+                                    empleados.get(po).setId(id);
+                                } else if (option == 6) {
+                                    System.out.print("Ingrese su nacionalidad: ");
+                                    String nacionalidad = sc.next();
+                                    empleados.get(po).setNacionalidad(nacionalidad);
+                                } else if (option == 7) {
+                                    System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                    int proyectoRealizados = sc.nextInt();
+                                    empleados.get(po).setProyectosRealizados(proyectoRealizados);
+                                } else if (option == 8) {
+                                    System.out.print("Ingrese su años de contrato: ");
+                                    int yearsContrato = sc.nextInt();
+                                    empleados.get(po).setYearsContrato(yearsContrato);
+                                } else if (option == 9) {
+                                    System.out.print("Ingrese su años de experienda tiene: ");
+                                    int yearsExperiencia = sc.nextInt();
+                                    ((Desarrolladores) empleados.get(po)).setYearsExperiencia(yearsExperiencia);
+                                } else if (option == 10) {
+                                    System.out.print("Ingrese cuantas horas trabaja al dia: ");
+                                    int horasTrabajadas = sc.nextInt();
+                                    ((Desarrolladores) empleados.get(po)).setHorasTrabajdas(horasTrabajadas);
+                                } else if (option == 11) {
+                                    System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                    int proyectosAsignado = sc.nextInt();
+                                    ((Desarrolladores) empleados.get(po)).setProyectosRealizados(proyectosAsignado);
+                                } else if (option == 12) {
+                                    System.out.print("Ingrese su lenguaje preferido: ");
+                                    String lenguajePreferido = sc.next();
+                                    ((Desarrolladores) empleados.get(po)).setLenguajePreferido(lenguajePreferido);
+                                }
+                            } else if (empleados.get(po) instanceof Consultores) {
+                                System.out.print("1. Cambiar username\n"
+                                        + "2. Cambiar contraseña}n"
+                                        + "3. Cambiar nombre\n"
+                                        + "4. Cambiar apellido\n"
+                                        + "5. Cambiar id\n"
+                                        + "6. Cambiar nacionalidad\n"
+                                        + "7. Cambiar proyectos realizados\n"
+                                        + "8. Cambiar años del contrato\n"
+                                        + "9. Cambiar campo\n"
+                                        + "10. Cambiar tiempo de consultoria\n"
+                                        + "11. Cambiar proyectos asignados\n"
+                                        + "12. Cambiar consultores\n"
+                                        + "13 Eliminar Desarrollador\n"
+                                        + "Ingrese su opcion: ");
+                                int option = sc.nextInt();
+                                if (option == 1) {
+                                    System.out.print("Ingrese su usuario: ");
+                                    String username = sc.next();
+                                    empleados.get(po).setUsername(username);
+                                } else if (option == 2) {
+                                    System.out.print("Ingrese su contraseña: ");
+                                    String password = sc.next();
+                                    empleados.get(po).setPassword(password);
+                                } else if (option == 3) {
+                                    System.out.print("Ingrese su nombre: ");
+                                    String nombre = sc.next();
+                                    empleados.get(po).setNombre(nombre);
+                                } else if (option == 4) {
+                                    System.out.print("Ingrese su apellido: ");
+                                    String apellido = sc.next();
+                                    empleados.get(po).setApellido(apellido);
+                                } else if (option == 5) {
+                                    System.out.print("Ingrese su ID: ");
+                                    String id = sc.next();
+                                    empleados.get(po).setId(id);
+                                } else if (option == 6) {
+                                    System.out.print("Ingrese su nacionalidad: ");
+                                    String nacionalidad = sc.next();
+                                    empleados.get(po).setNacionalidad(nacionalidad);
+                                } else if (option == 7) {
+                                    System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                    int proyectoRealizados = sc.nextInt();
+                                    empleados.get(po).setProyectosRealizados(proyectoRealizados);
+                                } else if (option == 8) {
+                                    System.out.print("Ingrese su años de contrato: ");
+                                    int yearsContrato = sc.nextInt();
+                                    empleados.get(po).setYearsContrato(yearsContrato);
+                                } else if (option == 9) {
+                                    System.out.print("Ingrese su campo de experiencia: ");
+                                    String campo = sc.next();
+                                    ((Consultores) empleados.get(po)).setCampo(campo);
+                                } else if (option == 10) {
+                                    System.out.print("Ingrese su tiempo de consultoria: ");
+                                    int tiempoConsultoria = sc.nextInt();
+                                    ((Consultores) empleados.get(po)).setTiempoConsultoria(tiempoConsultoria);
+                                } else if (option == 11) {
+                                    System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                    int proyectosAsignado = sc.nextInt();
+                                    ((Consultores) empleados.get(po)).setProyectosAignados(proyectosAsignado);
+                                } else if (option == 12) {
+                                    System.out.print("Ingrese cuantos consultores tiene: ");
+                                    int consultores = sc.nextInt();
+                                    ((Consultores) empleados.get(po)).setConsultores(consultores);
+                                } else if (option == 13) {
+                                    System.out.print("Ingrese la posicion del desarrollador que desea eliminar: ");
+                                    int v = sc.nextInt();
+                                    if (v < ((Consultores) empleados.get(po)).getDesarrolladores().size()) {
+                                        ((Consultores) empleados.get(po)).getDesarrolladores().remove(v);
+                                    } else {
+                                        System.out.println("*NUMERO NO DISPONIBLE*");
+                                    }
+                                }
+                            } else if (empleados.get(po) instanceof Directores) {
+                                System.out.print("1. Cambiar username\n"
+                                        + "2. Cambiar contraseña}n"
+                                        + "3. Cambiar nombre\n"
+                                        + "4. Cambiar apellido\n"
+                                        + "5. Cambiar id\n"
+                                        + "6. Cambiar nacionalidad\n"
+                                        + "7. Cambiar proyectos realizados\n"
+                                        + "8. Cambiar años del contrato\n"
+                                        + "9. Cambiar años en el puesto\n"
+                                        + "10. Cabiar proyectos asignados\n"
+                                        + "11. Eliminar un desarrolladorr\n"
+                                        + "Ingrese su opcion: ");
+                                int option = sc.nextInt();
+                                if (option == 1) {
+                                    System.out.print("Ingrese su usuario: ");
+                                    String username = sc.next();
+                                    empleados.get(po).setUsername(username);
+                                } else if (option == 2) {
+                                    System.out.print("Ingrese su contraseña: ");
+                                    String password = sc.next();
+                                    empleados.get(po).setPassword(password);
+                                } else if (option == 3) {
+                                    System.out.print("Ingrese su nombre: ");
+                                    String nombre = sc.next();
+                                    empleados.get(po).setNombre(nombre);
+                                } else if (option == 4) {
+                                    System.out.print("Ingrese su apellido: ");
+                                    String apellido = sc.next();
+                                    empleados.get(po).setApellido(apellido);
+                                } else if (option == 5) {
+                                    System.out.print("Ingrese su ID: ");
+                                    String id = sc.next();
+                                    empleados.get(po).setId(id);
+                                } else if (option == 6) {
+                                    System.out.print("Ingrese su nacionalidad: ");
+                                    String nacionalidad = sc.next();
+                                    empleados.get(po).setNacionalidad(nacionalidad);
+                                } else if (option == 7) {
+                                    System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                    int proyectoRealizados = sc.nextInt();
+                                    empleados.get(po).setProyectosRealizados(proyectoRealizados);
+                                } else if (option == 8) {
+                                    System.out.print("Ingrese su años de contrato: ");
+                                    int yearsContrato = sc.nextInt();
+                                    empleados.get(po).setYearsContrato(yearsContrato);
+                                } else if (option == 9) {
+                                    System.out.print("Ingrese su años en el puesto: ");
+                                    int yearsEnPuesto = sc.nextInt();
+                                    ((Directores) empleados.get(po)).setYearsEnPuesto(yearsEnPuesto);
+                                } else if (option == 10) {
+                                    System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                    int proyectosAsignado = sc.nextInt();
+                                    ((Directores) empleados.get(po)).setProyectosAsignado(proyectosAsignado);
+                                } else if (option == 11) {
+                                    System.out.print("Ingrese la posicion del desarrollador que desea eliminar: ");
+                                    int v = sc.nextInt();
+                                    if (v < ((Directores) empleados.get(po)).getDesarrolladoresAsignados().size()) {
+                                        ((Directores) empleados.get(po)).getDesarrolladoresAsignados().remove(v);
+                                    } else {
+                                        System.out.println("*NUMERO NO DISPONIBLE*");
+                                    }
+                                }
+                            } else if (empleados.get(po) instanceof Empleado) {
+                                System.out.print("1. Cambiar username\n"
+                                        + "2. Cambiar contraseña}n"
+                                        + "3. Cambiar nombre\n"
+                                        + "4. Cambiar apellido\n"
+                                        + "5. Cambiar id\n"
+                                        + "6. Cambiar nacionalidad\n"
+                                        + "7. Cambiar proyectos realizados\n"
+                                        + "8. Cambiar años del contrato\n"
+                                        + "Ingrese su opcion: ");
+                                int option = sc.nextInt();
+                                if (option == 1) {
+                                    System.out.print("Ingrese su usuario: ");
+                                    String username = sc.next();
+                                    empleados.get(po).setUsername(username);
+                                } else if (option == 2) {
+                                    System.out.print("Ingrese su contraseña: ");
+                                    String password = sc.next();
+                                    empleados.get(po).setPassword(password);
+                                } else if (option == 3) {
+                                    System.out.print("Ingrese su nombre: ");
+                                    String nombre = sc.next();
+                                    empleados.get(po).setNombre(nombre);
+                                } else if (option == 4) {
+                                    System.out.print("Ingrese su apellido: ");
+                                    String apellido = sc.next();
+                                    empleados.get(po).setApellido(apellido);
+                                } else if (option == 5) {
+                                    System.out.print("Ingrese su ID: ");
+                                    String id = sc.next();
+                                    empleados.get(po).setId(id);
+                                } else if (option == 6) {
+                                    System.out.print("Ingrese su nacionalidad: ");
+                                    String nacionalidad = sc.next();
+                                    empleados.get(po).setNacionalidad(nacionalidad);
+                                } else if (option == 7) {
+                                    System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                    int proyectoRealizados = sc.nextInt();
+                                    empleados.get(po).setProyectosRealizados(proyectoRealizados);
+                                } else if (option == 8) {
+                                    System.out.print("Ingrese su años de contrato: ");
+                                    int yearsContrato = sc.nextInt();
+                                    empleados.get(po).setYearsContrato(yearsContrato);
+                                }
+                            }
                         } else {
                             System.out.println("*EL NUMERO QUE INGRESO NO ESTA DISPONIBLE*");
                         }
@@ -339,11 +583,12 @@ public class Lab4P2_CesarBrito {
                                 }
                             } else if (empleados.get(i) instanceof Consultores) {
                                 int f = 1;
-                                while (f != 3) {
+                                while (f != 5) {
                                     System.out.println("1. Ver mi informacion");
                                     System.out.println("2. Eliminar mi cuenta");
                                     System.out.println("3. Modificar mi informacion");
                                     System.out.println("4. Ver proyectos conmigo");
+                                    System.out.println("5. Salir del menu");
                                     System.out.print("Ingrese su opcion: ");
                                     f = sc.nextInt();
                                     if (f == 1) {
@@ -372,33 +617,283 @@ public class Lab4P2_CesarBrito {
                                         int proyectosAsignado = sc.nextInt();
                                         System.out.print("Ingrese cuantos consultores tiene: ");
                                         int consultores = sc.nextInt();
-                                        ((Consultores)empleados.get(i)).setApellido(apellido);
-                                        ((Consultores)empleados.get(i)).setCampo(campo);
-                                        ((Consultores)empleados.get(i)).setConsultores(consultores);
-                                        ((Consultores)empleados.get(i)).setId(id);
-                                        ((Consultores)empleados.get(i)).setNacionalidad(nacionalidad);
-                                        ((Consultores)empleados.get(i)).setNombre(nombre);
-                                        ((Consultores)empleados.get(i)).setProyectosAignados(proyectosAsignado);
-                                        ((Consultores)empleados.get(i)).setProyectosRealizados(proyectoRealizados);
-                                        ((Consultores)empleados.get(i)).setTiempoConsultoria(tiempoConsultoria);
-                                        ((Consultores)empleados.get(i)).setYearsContrato(yearsContrato);
-                                    }else if(f == 4){
+                                        ((Consultores) empleados.get(i)).setApellido(apellido);
+                                        ((Consultores) empleados.get(i)).setCampo(campo);
+                                        ((Consultores) empleados.get(i)).setConsultores(consultores);
+                                        ((Consultores) empleados.get(i)).setId(id);
+                                        ((Consultores) empleados.get(i)).setNacionalidad(nacionalidad);
+                                        ((Consultores) empleados.get(i)).setNombre(nombre);
+                                        ((Consultores) empleados.get(i)).setProyectosAignados(proyectosAsignado);
+                                        ((Consultores) empleados.get(i)).setProyectosRealizados(proyectoRealizados);
+                                        ((Consultores) empleados.get(i)).setTiempoConsultoria(tiempoConsultoria);
+                                        ((Consultores) empleados.get(i)).setYearsContrato(yearsContrato);
+                                    } else if (f == 4) {
                                         for (int j = 0; j < proyectos.size(); j++) {
-                                            if(proyectos.get(j).getConsultores().contains(empleados.get(i))){
+                                            if (proyectos.get(j).getConsultores().contains(empleados.get(i))) {
                                                 System.out.println(proyectos.get(j));
                                             }
                                         }
                                     }
                                 }
                             } else if (empleados.get(i) instanceof Directores) {
+                                int f = 1;
+                                while (f != 9) {
+                                    System.out.print("1. Crear Desarrollador\n"
+                                            + "2. Crear Consultor\n"
+                                            + "3. Modificar Desarrolador\n"
+                                            + "4. Modificar Consultor\n"
+                                            + "5. Listar Desarroladores\n"
+                                            + "6. Listar Consultores\n"
+                                            + "7. Ver mis proyectos\n"
+                                            + "8. Ver todos los proyectos del sistema\n"
+                                            + "9. Marcar proyecto como completado\n"
+                                            + "10. Salir del menu\n"
+                                            + "Ingrese su opcion: ");
+                                    f = sc.nextInt();
+                                    if (f == 1) {
+                                        System.out.print("Ingrese su usuario: ");
+                                        String username = sc.next();
+                                        System.out.print("Ingrese su contraseña: ");
+                                        String password = sc.next();
+                                        System.out.print("Ingrese su nombre: ");
+                                        String nombre = sc.next();
+                                        System.out.print("Ingrese su apellido: ");
+                                        String apellido = sc.next();
+                                        System.out.print("Ingrese su ID: ");
+                                        String id = sc.next();
+                                        System.out.print("Ingrese su nacionalidad: ");
+                                        String nacionalidad = sc.next();
+                                        System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                        int proyectoRealizados = sc.nextInt();
+                                        System.out.print("Ingrese su años de contrato: ");
+                                        int yearsContrato = sc.nextInt();
+                                        double sueldo = 0;
+                                        System.out.print("Ingrese su años de experienda tiene: ");
+                                        int yearsExperiencia = sc.nextInt();
+                                        System.out.print("Ingrese cuantas horas trabaja al dia: ");
+                                        int horasTrabajadas = sc.nextInt();
+                                        System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                        int proyectosAsignado = sc.nextInt();
+                                        System.out.print("Ingrese su lenguaje preferido: ");
+                                        String lenguajePreferido = sc.next();
+                                        empleados.add(new Desarrolladores(yearsExperiencia, horasTrabajadas, proyectosAsignado, sueldo, lenguajePreferido, username, password, nombre, apellido, id, nacionalidad, proyectoRealizados, yearsContrato));
+                                    } else if (f == 2) {
+                                        System.out.print("Ingrese su usuario: ");
+                                        String username = sc.next();
+                                        System.out.print("Ingrese su contraseña: ");
+                                        String password = sc.next();
+                                        System.out.print("Ingrese su nombre: ");
+                                        String nombre = sc.next();
+                                        System.out.print("Ingrese su apellido: ");
+                                        String apellido = sc.next();
+                                        System.out.print("Ingrese su ID: ");
+                                        String id = sc.next();
+                                        System.out.print("Ingrese su nacionalidad: ");
+                                        String nacionalidad = sc.next();
+                                        System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                        int proyectoRealizados = sc.nextInt();
+                                        System.out.print("Ingrese su años de contrato: ");
+                                        int yearsContrato = sc.nextInt();
+                                        System.out.print("Ingrese su campo de experiencia: ");
+                                        String campo = sc.next();
+                                        System.out.print("Ingrese su tiempo de consultoria: ");
+                                        int tiempoConsultoria = sc.nextInt();
+                                        System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                        int proyectosAsignado = sc.nextInt();
+                                        System.out.print("Ingrese cuantos consultores tiene: ");
+                                        int consultores = sc.nextInt();
+                                        double sueldo = 0;
+                                        empleados.add(new Consultores(campo, tiempoConsultoria, proyectosAsignado, consultores, sueldo, username, password, nombre, apellido, id, nacionalidad, proyectoRealizados, yearsContrato));
+                                    } else if (f == 3) {
+                                        System.out.print("Ingrese la posicion del desarrollador que desea modificar: ");
+                                        int g = sc.nextInt();
+                                        if (g < empleados.size() && empleados.get(g) instanceof Desarrolladores) {
+                                            System.out.print("1. Cambiar username\n"
+                                                    + "2. Cambiar contraseña}n"
+                                                    + "3. Cambiar nombre\n"
+                                                    + "4. Cambiar apellido\n"
+                                                    + "5. Cambiar id\n"
+                                                    + "6. Cambiar nacionalidad\n"
+                                                    + "7. Cambiar proyectos realizados\n"
+                                                    + "8. Cambiar años del contrato\n"
+                                                    + "9. Cambiar años de experiencia\n"
+                                                    + "10. Cambiar horas de trabajo\n"
+                                                    + "11. Cambiar proyectos asignados\n"
+                                                    + "12. Cambiar lenguaje preferido\n"
+                                                    + "Ingrese su opcion: ");
+                                            int option = sc.nextInt();
+                                            if (option == 1) {
+                                                System.out.print("Ingrese su usuario: ");
+                                                String username = sc.next();
+                                                empleados.get(g).setUsername(username);
+                                            } else if (option == 2) {
+                                                System.out.print("Ingrese su contraseña: ");
+                                                String password = sc.next();
+                                                empleados.get(g).setPassword(password);
+                                            } else if (option == 3) {
+                                                System.out.print("Ingrese su nombre: ");
+                                                String nombre = sc.next();
+                                                empleados.get(g).setNombre(nombre);
+                                            } else if (option == 4) {
+                                                System.out.print("Ingrese su apellido: ");
+                                                String apellido = sc.next();
+                                                empleados.get(g).setApellido(apellido);
+                                            } else if (option == 5) {
+                                                System.out.print("Ingrese su ID: ");
+                                                String id = sc.next();
+                                                empleados.get(g).setId(id);
+                                            } else if (option == 6) {
+                                                System.out.print("Ingrese su nacionalidad: ");
+                                                String nacionalidad = sc.next();
+                                                empleados.get(g).setNacionalidad(nacionalidad);
+                                            } else if (option == 7) {
+                                                System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                                int proyectoRealizados = sc.nextInt();
+                                                empleados.get(g).setProyectosRealizados(proyectoRealizados);
+                                            } else if (option == 8) {
+                                                System.out.print("Ingrese su años de contrato: ");
+                                                int yearsContrato = sc.nextInt();
+                                                empleados.get(g).setYearsContrato(yearsContrato);
+                                            } else if (option == 9) {
+                                                System.out.print("Ingrese su años de experienda tiene: ");
+                                                int yearsExperiencia = sc.nextInt();
+                                                ((Desarrolladores) empleados.get(g)).setYearsExperiencia(yearsExperiencia);
+                                            } else if (option == 10) {
+                                                System.out.print("Ingrese cuantas horas trabaja al dia: ");
+                                                int horasTrabajadas = sc.nextInt();
+                                                ((Desarrolladores) empleados.get(g)).setHorasTrabajdas(horasTrabajadas);
+                                            } else if (option == 11) {
+                                                System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                                int proyectosAsignado = sc.nextInt();
+                                                ((Desarrolladores) empleados.get(g)).setProyectosRealizados(proyectosAsignado);
+                                            } else if (option == 12) {
+                                                System.out.print("Ingrese su lenguaje preferido: ");
+                                                String lenguajePreferido = sc.next();
+                                                ((Desarrolladores) empleados.get(g)).setLenguajePreferido(lenguajePreferido);
+                                            }
+                                        } else {
+                                            System.out.println("*OPCION NO DISPONIBLE*");
+                                        }
+                                    } else if (f == 4) {
+                                        System.out.print("Ingrese la posicion del desarrollador que desea modificar: ");
+                                        int g = sc.nextInt();
+                                        if (g < empleados.size() && empleados.get(g) instanceof Consultores) {
+                                            System.out.print("1. Cambiar username\n"
+                                                    + "2. Cambiar contraseña}n"
+                                                    + "3. Cambiar nombre\n"
+                                                    + "4. Cambiar apellido\n"
+                                                    + "5. Cambiar id\n"
+                                                    + "6. Cambiar nacionalidad\n"
+                                                    + "7. Cambiar proyectos realizados\n"
+                                                    + "8. Cambiar años del contrato\n"
+                                                    + "9. Cambiar campo\n"
+                                                    + "10. Cambiar tiempo de consultoria\n"
+                                                    + "11. Cambiar proyectos asignados\n"
+                                                    + "12. Cambiar consultores\n"
+                                                    + "13 Eliminar Desarrollador\n"
+                                                    + "Ingrese su opcion: ");
+                                            int option = sc.nextInt();
+                                            if (option == 1) {
+                                                System.out.print("Ingrese su usuario: ");
+                                                String username = sc.next();
+                                                empleados.get(g).setUsername(username);
+                                            } else if (option == 2) {
+                                                System.out.print("Ingrese su contraseña: ");
+                                                String password = sc.next();
+                                                empleados.get(g).setPassword(password);
+                                            } else if (option == 3) {
+                                                System.out.print("Ingrese su nombre: ");
+                                                String nombre = sc.next();
+                                                empleados.get(g).setNombre(nombre);
+                                            } else if (option == 4) {
+                                                System.out.print("Ingrese su apellido: ");
+                                                String apellido = sc.next();
+                                                empleados.get(g).setApellido(apellido);
+                                            } else if (option == 5) {
+                                                System.out.print("Ingrese su ID: ");
+                                                String id = sc.next();
+                                                empleados.get(g).setId(id);
+                                            } else if (option == 6) {
+                                                System.out.print("Ingrese su nacionalidad: ");
+                                                String nacionalidad = sc.next();
+                                                empleados.get(g).setNacionalidad(nacionalidad);
+                                            } else if (option == 7) {
+                                                System.out.print("Ingrese su cuantos proyectos ha realizado: ");
+                                                int proyectoRealizados = sc.nextInt();
+                                                empleados.get(g).setProyectosRealizados(proyectoRealizados);
+                                            } else if (option == 8) {
+                                                System.out.print("Ingrese su años de contrato: ");
+                                                int yearsContrato = sc.nextInt();
+                                                empleados.get(g).setYearsContrato(yearsContrato);
+                                            } else if (option == 9) {
+                                                System.out.print("Ingrese su campo de experiencia: ");
+                                                String campo = sc.next();
+                                                ((Consultores) empleados.get(g)).setCampo(campo);
+                                            } else if (option == 10) {
+                                                System.out.print("Ingrese su tiempo de consultoria: ");
+                                                int tiempoConsultoria = sc.nextInt();
+                                                ((Consultores) empleados.get(g)).setTiempoConsultoria(tiempoConsultoria);
+                                            } else if (option == 11) {
+                                                System.out.print("Ingrese cuantos proyectos tiene asignado: ");
+                                                int proyectosAsignado = sc.nextInt();
+                                                ((Consultores) empleados.get(g)).setProyectosAignados(proyectosAsignado);
+                                            } else if (option == 12) {
+                                                System.out.print("Ingrese cuantos consultores tiene: ");
+                                                int consultores = sc.nextInt();
+                                                ((Consultores) empleados.get(g)).setConsultores(consultores);
+                                            } else if (option == 13) {
+                                                System.out.print("Ingrese la posicion del desarrollador que desea eliminar: ");
+                                                int v = sc.nextInt();
+                                                if (v < ((Consultores) empleados.get(g)).getDesarrolladores().size()) {
+                                                    ((Consultores) empleados.get(g)).getDesarrolladores().remove(v);
+                                                } else {
+                                                    System.out.println("*NUMERO NO DISPONIBLE*");
+                                                }
+                                            } else {
+                                                System.out.println("*OPCION NO DISPONIBLE*");
+                                            }
 
+                                        }
+                                    } else if (f == 5) {
+                                        for (int j = 0; j < empleados.size(); j++) {
+                                            if (empleados.get(j) instanceof Desarrolladores) {
+                                                System.out.println(empleados.indexOf(empleados.get(j)) + " - " + empleados.get(j));
+                                            }
+                                        }
+                                    } else if (f == 6) {
+                                        for (int j = 0; j < empleados.size(); j++) {
+                                            if (empleados.get(j) instanceof Consultores) {
+                                                System.out.println(empleados.indexOf(empleados.get(j)) + " - " + empleados.get(j));
+                                            }
+                                        }
+                                    } else if (f == 7) {
+                                        for (int j = 0; j < proyectos.size(); j++) {
+                                            if (proyectos.get(j).getDirectores().contains(empleados.get(i))) {
+                                                System.out.println(proyectos.indexOf(proyectos.get(j)) + " - " + proyectos.get(j));
+                                            }
+                                        }
+                                    } else if (f == 8) {
+                                        for (int j = 0; j < proyectos.size(); j++) {
+                                            System.out.println(i + " - " + proyectos.get(j));
+                                        }
+                                    } else if (f == 9) {
+                                        System.out.print("Ingrese la posicion del proyecto que desea terminar: ");
+                                        int g = sc.nextInt();
+                                        if(g < proyectos.size()){
+                                            proyectos.get(g).setEstadoActual("Terminado");
+                                        }
+                                    }
+                                }
                             }
                         }
+                        System.out.println("");
                     }
                 }
-                System.out.println("");
             }
+
         }
     }
-
 }
+
+
+// porfavor ten piedad :v
